@@ -10,13 +10,9 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(12,9,121,1) 0%, rgb(0
     height: 100vh;
 }
 
-.interface {
-    max-width: 1280;
-    margin: 0 auto;
-}
-
 .flex {
     display: flex;
+    flex-wrap:  wrap;
 }
 
 header {
@@ -26,6 +22,7 @@ header {
 }
 
 header .topo-txt {
+    color: #fff;
     margin: 40px 8%;
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -52,7 +49,6 @@ h2 span {
 .marquee {
     width: 100%; /* Largura total do contêiner */
     white-space: nowrap; /* Impede quebra de linha */
-    overflow: hidden; /* Esconde o conteúdo que sai dos limites */
     box-sizing: border-box;
 }
 
@@ -124,3 +120,75 @@ section .sobre {
     padding: 80px 4%;
 }
 
+/*--------------------------------------------@Media------------------------------------------------------*/
+
+@media screen and (max-width: 1024px) {
+    header {
+        padding: 50px 2%;
+        margin: 20px;
+    }
+
+    header .topo-txt {
+        font-size: 18px;
+        margin: 20px 4%;
+    }
+
+    .img-gin {
+        width: 280px;
+        height: 360px;
+        margin: 20px 25%;
+    }
+
+    .interface {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 30px 2%;
+    }
+
+    header .topo-txt {
+        font-size: 16px;
+        margin: 15px 2%;
+    }
+
+    .img-gin {
+        width: 240px;
+        height: 320px;
+    }
+
+    section .fotos-gincana {
+        padding: 60px 2%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 20px 1%;
+    }
+
+    header .topo-txt {
+        font-size: 14px;
+        margin: 10px 2%;
+    }
+
+    .img-gin {
+        width: 200px;
+        height: 280px;
+    }
+
+    section .fotos-gincana {
+        padding: 40px 1%;
+    }
+
+    h2 span {
+        font-size: 18px;
+    }
+}
